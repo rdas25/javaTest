@@ -1,12 +1,16 @@
 // Practice
 
-String firstMessage;
-int hour, minute;
+public class Main {
+    public static void main(String[] args) {
+        String firstMessage;
+        int hour, minute;
 
-firstMessage = "Hello, World!";
-hours = 10, minute = 10;
+        firstMessage = "Hello, World!";
+        hour = 10; minute = 10;
 
-String language = "Java";
+        String language = "Java";
 
-System.out.println(firstMessage);
-System.out.print(hours + ":" + minute);
+        System.out.println(firstMessage);
+        System.out.print(hour + ":" + minute);
+    }
+}
