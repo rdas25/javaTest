@@ -10,7 +10,11 @@ public class Main {
 
         String language = "Java";
 
-        System.out.println(firstMessage);
+        System.out.println(firstMessage); // lowercase then uppercase
         System.out.print(hour + ":" + minute);
+
+        System.out.println(" Total minutes: " + (hour * 60 + minute));
+
+        System.out.println(10 / 3 + " " + -10 / 3); // rounds toward zero
     }
 }
