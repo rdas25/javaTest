@@ -1,6 +1,4 @@
-// Practice
-
-public class Main {
+public class chapterTwo {
 
     public static void main(String[] args) {
         String firstMessage;
