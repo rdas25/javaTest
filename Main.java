@@ -1,6 +1,7 @@
 // Practice
 
 public class Main {
+
     public static void main(String[] args) {
         String firstMessage;
         int hour, minute;
@@ -27,5 +28,13 @@ public class Main {
         System.out.println(.1 + .1 + .1 + .1 + .1 + .1 + .1 + .1 + .1 + .1); // equals .9999..., to avoid rounding error use integers
     
         System.out.println(1 + 2 + " Hello " + 1 + 2); // left to right, the first 1 + 2 is evaluated to 3, but not the second 1 + 2
+    
+        // int x = y + 1 correct
+        // int x - 1 = y incorrect
+
+        // compile-time error - syntax error, before the program is run
+        // run-time error - interpreter is executing byte code and something goes wrong, after the program is run
+        // logic error - program will compile and run, but it doesn't do what you intended
     }
+
 }
