@@ -1,6 +1,11 @@
-public class ChapterFour{
+public class ChapterFour {
+
+    public static void newLine() {
+        System.out.println("Hello, world!");
+    }
 
     public static void main(String[] args) {
+        /*
         double root = Math.sqrt(4);
         System.out.println(root);
 
@@ -10,8 +15,9 @@ public class ChapterFour{
 
         System.out.println(Math.exp(Math.log(Math.E)));
         System.out.println((int) Math.pow(2, 3));
+        */
 
-
+        newLine();
     }
 
 }
