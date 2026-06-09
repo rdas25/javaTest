@@ -1,7 +1,17 @@
+import java.util.Scanner;
+
 public class ChapterFour {
 
     public static void newLine() {
         System.out.println("Hello, world!");
+    }
+
+    public static void print_name(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+
+    public static void time(int hour, int minute) {
+        System.out.printf("%d : %d\n", hour, minute);
     }
 
     public static void main(String[] args) {
@@ -18,6 +28,13 @@ public class ChapterFour {
         */
 
         newLine();
+
+        Scanner in = new Scanner(System.in);
+        System.out.print("Name pls: ");
+        String name = in.nextLine();
+        print_name(name);
+
+        time(12, 12);
     }
 
 }
