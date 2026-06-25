@@ -56,6 +56,54 @@ public class ChapterTwelve {
         }
     }
 
+    public static int search(ChapterTwelve[] cards, ChapterTwelve target) {
+        for (int i = 0; i < cards.length; i ++) {
+            if (cards[i].equals(target)) {
+                return i;
+            }
+        }
+        
+        return -1;
+    }
+
+    public static int binarySearch(ChapterTwelve[] cards, ChapterTwelve target) {
+        int low = 0;
+        int high = cards.length - 1;
+        while (low <= high) {
+            System.out.println(low + ", " + high);
+
+            int mid = (low + high) / 2; // step 1
+            int comp = cards[mid].compareTo(target);
+    
+            if (comp == 0) { // step 2
+                return mid;
+            } else if (comp < 0) { // step 3
+                low = mid + 1;
+            } else { // step 4
+                high = mid - 1;
+            }
+        }
+        
+        return -1;
+    }
+
+    public static int binarySearch(ChapterTwelve[] cards, ChapterTwelve target, int low, int high) {
+        if (high < low) {
+            return -1;
+        }
+
+        int mid = (low + high) / 2; // step 1
+        int comp = cards[mid].compareTo(target);
+
+        if (comp == 0) { // step 2
+            return mid;
+        } else if (comp < 0) { // step 3
+            return binarySearch(cards, target, mid + 1, high);
+        } else { // step 4
+            return binarySearch(cards, target, low, mid - 1);
+        }
+    }
+
     public static void main(String[] args) {
         ChapterTwelve aceOfClubs = new ChapterTwelve(1, 0);
         // System.out.println(aceOfClubs);
@@ -70,6 +118,10 @@ public class ChapterTwelve {
         }
 
         printDeck(cards);
+
+        System.out.println(search(cards, new ChapterTwelve(1, 0)));
+        System.out.println(binarySearch(cards, new ChapterTwelve(1, 0)));
+        System.out.println(binarySearch(cards, new ChapterTwelve(1, 0), 0, cards.length - 1));
     }
 
 }
